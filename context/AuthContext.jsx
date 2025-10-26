@@ -52,21 +52,16 @@ export function AuthProvider(props) {
   }
 
   async function handleAddSub(newSubscription) {
-    if (userData.subscriptions.length > 30) {
-      return;
-    }
+    if (userData?.subscriptions?.length > 30) return;
 
-    const newSubs = [...userData.subscriptions, newSubscription];
-
-    setUserData({ subscriptions: newSubs });
+    const newSubs = [...(userData?.subscriptions || []), newSubscription];
+    setUserData((prev) => ({ ...prev, subscriptions: newSubs }));
     await saveToFirebase(newSubs);
   }
 
   async function handleDeleteSub(index) {
-    const newSubs = userData.subscriptions.filter((val, valIndex) => {
-      return valIndex !== index;
-    });
-    setUserData({ subscriptions: newSubs });
+    const newSubs = userData.subscriptions.filter((_, i) => i !== index);
+    setUserData((prev) => ({ ...prev, subscriptions: newSubs }));
     await saveToFirebase(newSubs);
   }
 

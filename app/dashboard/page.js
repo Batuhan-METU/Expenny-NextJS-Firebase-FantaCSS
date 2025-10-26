@@ -39,12 +39,10 @@ export default function DashboardPage() {
     setFormData(newData);
   };
 
-  const handleEditSub = (index) => {
-    const data = userData.subscriptions.find((val, valIndex) => {
-      return valIndex === index;
-    });
+  const handleEditSub = async (index) => {
+    const data = userData.subscriptions[index];
     setFormData(data);
-    handleDeleteSub(index);
+    await handleDeleteSub(index);
     setIsAddEntry(true);
   };
 

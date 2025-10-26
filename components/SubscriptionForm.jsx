@@ -162,7 +162,7 @@ export default function SubscriptionForm(props) {
             <button className="form-button" onClick={handleClose}>
               Cancel
             </button>
-            <button className="form-button " type="submit">
+            <button className="form-button" type="submit">
               Add Subscription
             </button>
           </div>
