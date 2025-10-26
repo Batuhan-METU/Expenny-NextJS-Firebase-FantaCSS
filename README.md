@@ -1,4 +1,4 @@
-<h1 align="center">📊 Expenny - Subscription & Expense Tracker</h1>
+<h1 align="center">📊 Expenny - Subscription & Expense Tracker (NextJS + Firebase)</h1>
 
 => This is a **full-stack web application** built to help users **track subscriptions, recurring payments, and personal expenses**.  
 => Users can add, update, and remove subscriptions, set reminders, and view analytics of their spending.  
