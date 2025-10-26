@@ -52,17 +52,27 @@ export function AuthProvider(props) {
   }
 
   async function handleAddSub(newSubscription) {
-    if (userData?.subscriptions?.length > 30) return;
+    //remove this line if u put in a paywall and actually are making
+    if (userData.subscriptions.length > 30) {
+      return;
+    }
 
-    const newSubs = [...(userData?.subscriptions || []), newSubscription];
-    setUserData((prev) => ({ ...prev, subscriptions: newSubs }));
-    await saveToFirebase(newSubs);
+    // modify the local state (global context)
+    const newSubscriptions = [...userData.subscriptions, newSubscription];
+    setUserData({ subscriptions: newSubscriptions });
+
+    // write the changes to our firebase database (asynchronous)
+    await saveToFirebase(newSubscriptions);
   }
 
   async function handleDeleteSub(index) {
-    const newSubs = userData.subscriptions.filter((_, i) => i !== index);
-    setUserData((prev) => ({ ...prev, subscriptions: newSubs }));
-    await saveToFirebase(newSubs);
+    // delete the entry at that index
+    const newSubscriptions = userData.subscriptions.filter((val, valIndex) => {
+      return valIndex !== index;
+    });
+    setUserData({ subscriptions: newSubscriptions });
+
+    await saveToFirebase(newSubscriptions);
   }
 
   useEffect(() => {

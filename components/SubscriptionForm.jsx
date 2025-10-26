@@ -13,6 +13,7 @@ export default function SubscriptionForm(props) {
     await handleAddSub(formData);
 
     handleResetForm();
+
     closeInput();
   };
 
