@@ -63,7 +63,7 @@ header div:first-of-type a {
   gap: 1.5rem;
 }
 
-.full-line {
+.full-line a {
   height: 1px;
   background: var(--background-muted);
 }

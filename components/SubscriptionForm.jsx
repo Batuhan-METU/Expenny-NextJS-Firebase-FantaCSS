@@ -7,9 +7,11 @@ export default function SubscriptionForm(props) {
   const { closeInput, formData, handleChangeInput, handleResetForm } = props;
   const { handleAddSub } = useAuth();
 
-  const handleFormSubmit = (e) => {
-    e.preventDefault(); // prevents the random as behaviour of reloading the web page.
-    handleAddSub(formData);
+  const handleFormSubmit = async (e) => {
+    e.preventDefault();
+
+    await handleAddSub(formData);
+
     handleResetForm();
     closeInput();
   };
