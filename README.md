@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<h1 align="center">📊 Expenny - Subscription & Expense Tracker</h1>
 
-## Getting Started
+=> This is a **full-stack web application** built to help users **track subscriptions, recurring payments, and personal expenses**.  
+=> Users can add, update, and remove subscriptions, set reminders, and view analytics of their spending.  
+=> Built with **NextJS, Firebase, and FantaCSS** for a modern, responsive, and fast experience.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+🚀 Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+-> **Add & Manage Subscriptions** with custom categories  
+-> **Recurring Payment Tracking** with automatic notifications  
+-> **Dashboard & Analytics** for visualizing expenses  
+-> **User authentication & authorization** via **Firebase Auth**  
+-> **Expense reports** with monthly summaries  
+-> **Responsive UI** built with **FantaCSS** + custom styling  
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+📂 Project Structure
 
-## Learn More
+**/app & /pages**     → **Routing & API** (frontend + backend)  
+**/components**       → Reusable **UI components**  
+**/lib & /services**  → **Firebase logic**, database handlers, auth, notifications  
+**/styles**           → **FantaCSS** & Custom CSS  
+**/public**           → Static Assets (images, icons, etc.)  
+**/utils**            → Helpers, Constants, Validation  
+**README.md**         → Project Documentation  
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+🛠 Technologies Used
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**Frontend**: NextJS, ReactJS, FantaCSS, CSS Modules  
+**Backend / Database**: Firebase (Firestore & Authentication)  
+**State Management**: React Context API  
+**Notifications**: Firebase Cloud Functions / Email Reminders  
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+🎯 Goal
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+To provide users with a **simple, efficient way to track subscriptions and recurring expenses**, helping them manage finances without stress.
+
+---
+
+🌐 Live App
+
+You can access the **live app** via --> **https://expenny-subtracker.netlify.app/** 🚀
+
+---
+
+📌 Notes
+
+- ✅ Backend handled entirely with **Firebase** (Firestore + Auth + Functions)  
+- 🔐 Includes **secure authentication** and route protection  
+- 🧪 Future plans: Export reports, integrate budgeting features, multi-currency support  
